@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Exec=setxkbmap latam
+Hidden=false
+Name[es_AR]=Teclado latino
+Name=Teclado latino
+Comment[es_AR]=
+Comment=
+X-MATE-Autostart-Delay=0

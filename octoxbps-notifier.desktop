@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Exec=octoxbps-notifier
+Hidden=false
+Name[es_AR]=Actualizaciones
+Name=Actualizaciones
+Comment[es_AR]=
+Comment=
+X-MATE-Autostart-Delay=0

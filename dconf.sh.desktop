@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Exec=/usr/share/MADdconf.sh
+Hidden=false
+Name[es_AR]=dconf
+Name=dconf
+Comment[es_AR]=
+Comment=
+X-MATE-Autostart-Delay=3

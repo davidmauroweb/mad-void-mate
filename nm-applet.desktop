@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Exec=nm-applet
+Hidden=false
+Name[es_AR]=Applet de Red
+Name=Applet de Red
+Comment[es_AR]=
+Comment=
+X-MATE-Autostart-Delay=0

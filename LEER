@@ -1,0 +1,23 @@
+### Post Instalación de VOID para escritorio Mate
+
+1.Luego de instalar VOID. Iniciar con el usuario standar (NO ROOT)
+
+2.Instalar Git 
+sudo xbps-install -Sy git
+
+3.Clonar del repositorio el script
+git clone https://gitlab.com/davimauroweb/MAD-void_mate.git
+
+4.Entrar al subdirectorio
+cd MAD-void_mate
+
+5. Dar permisos de Ejecución a MadVM.sh
+chmod +x MadVM.sh
+
+6. Ejectura el Script
+./MadVM.sh
+
+NOTA:
+A-Las opciones para seleccionar los paquetes a instalar se ingresan con numeros (solo una seleccion por pregunta)
+B-El script pide clave de usuario que pueda ejecutar comandos a travez de SUDO esta clave puede pedirse de vuelta si entre cada ejecucion de SUDO transucurre demasiado tiempo.
+
