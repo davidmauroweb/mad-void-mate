@@ -117,6 +117,25 @@ cp backgrounds.xml $HOME/.config/mate/
 mkdir $HOME/.config/autostart
 cp *.desktop $HOME/.config/autostart/
 
+clear
+echo "XBPS-Src - para instalar software extra "
+echo "Visitar https://github.com/void-linux/void-packages para mas info"
+echo "-----------------------------------------------------------------"
+echo "1. Si"
+echo "2. No"
+read m
+case $m in
+        1)
+	cd
+        git clone https://github.com/void-linux/void-packages.git
+	cd void-packages
+	./xbps-src binary-bootstrap
+        ;;
+        *)
+        echo "Se ha omitido la instalación de XBPS-Src"
+        ;;
+esac
+
 #iniciar servicios
 echo "Activando Servicios"
 sudo cp dconf.sh /usr/share/MADdconf.sh
