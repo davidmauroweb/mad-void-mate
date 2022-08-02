@@ -6,7 +6,7 @@
 sudo xbps-install -Sy git
 
 3.Clonar del repositorio el script
-git clone https://github.com/davimauroweb/mad-void_mate.git --depth=1
+git clone --depth=1 https://github.com/davidmauroweb/mad-void-mate.git
 
 4.Entrar al subdirectorio
 cd MAD-void_mate
