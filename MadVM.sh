@@ -138,10 +138,10 @@ esac
 
 #iniciar servicios
 echo "Activando Servicios"
-sudo cp dconf.sh /usr/share/MADdconf.sh
-sudo cp lxdm.conf /etc/lxdm/
+sudo cp $HOME/mad-void-mate/dconf.sh /usr/share/MADdconf.sh
+sudo cp $HOME/mad-void-mate/lxdm.conf /etc/lxdm/
 sudo chmod a+x /usr/share/MADdconf.sh
-sudo cp bg* /usr/share/backgrounds/
+sudo cp $HOME/mad-void-mate/bg* /usr/share/backgrounds/
 sudo ln -s /etc/sv/dbus /var/service/
 sudo ln -s /etc/sv/NetworkManager /var/service/
 sudo ln -s /etc/sv/elogind /var/service/
