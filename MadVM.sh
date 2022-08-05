@@ -136,6 +136,24 @@ case $m in
         ;;
 esac
 
+clear
+echo "Impresoras "
+echo "Instalar soporte de impresion CUPS?"
+echo "-----------------------------------------------------------------"
+echo "1. Si"
+echo "2. No"
+read m
+case $m in
+        1)
+	sudo xbps-install -S cups cups-filters gutenprint foomatic-db foomatic-db-nonfree avahi brother-brlaser nss-mdns system-config-printer hplip
+	sudo ln -s /etc/sv/cupsd /etc/runit/runsvdir/default/
+	sudo ln -s /etc/sv/avahi-daemon /var/service
+        ;;
+        *)
+        echo "Se ha omitido la instalación de CUPS"
+        ;;
+esac
+
 #iniciar servicios
 echo "Activando Servicios"
 sudo cp $HOME/mad-void-mate/dconf.sh /usr/share/MADdconf.sh
