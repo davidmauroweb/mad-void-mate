@@ -145,7 +145,7 @@ echo "2. No"
 read m
 case $m in
         1)
-	sudo xbps-install -S cups cups-filters gutenprint foomatic-db foomatic-db-nonfree avahi brother-brlaser nss-mdns system-config-printer hplip
+	sudo xbps-install -S cups cups-filters gutenprint foomatic-db foomatic-db-nonfree avahi hplip brother-brlaser nss-mdns system-config-printer cups-pk-helper
 	sudo ln -s /etc/sv/cupsd /etc/runit/runsvdir/default/
 	sudo ln -s /etc/sv/avahi-daemon /var/service
         ;;
