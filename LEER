@@ -21,3 +21,6 @@ NOTA:
 A-Las opciones para seleccionar los paquetes a instalar se ingresan con numeros (solo una seleccion por pregunta)
 B-El script pide clave de usuario que pueda ejecutar comandos a travez de SUDO esta clave puede pedirse de vuelta si entre cada ejecucion de SUDO transucurre demasiado tiempo.
 
+### Agrego algo de software
+# Spotify
+sudo xbps-install -y void-repo-nonfree; xbps-install -Sy spotify
