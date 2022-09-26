@@ -1,6 +1,6 @@
 ## Verificar si el usuario pertenece al grupo wheel
 en /etc/group
-wheel:x:4:"USUARIO"
+wheel : x : 4 : "USUARIO"
 
 y en /etc/sudoers
 quitar los numerales en:
