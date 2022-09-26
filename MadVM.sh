@@ -11,6 +11,7 @@ echo " oportunidades por cuestiones de TimeOut"
 echo "***********************************************"
 echo ""
 echo ""
+rt=$(pwd)
 sleep 2s
 echo "Introduzca contraseña para continuar"
 sudo -k
@@ -130,6 +131,7 @@ case $m in
         git clone https://github.com/void-linux/void-packages.git
 	cd void-packages
 	./xbps-src binary-bootstrap
+	cd ..
         ;;
         *)
         echo "Se ha omitido la instalación de XBPS-Src"
@@ -156,7 +158,6 @@ esac
 
 #iniciar servicios
 echo "Activando Servicios"
-rt=$(pwd)
 sudo cp $rt/dconf.sh /usr/share/MADdconf.sh
 sudo cp $rt/lxdm.conf /etc/lxdm/
 sudo chmod a+x /usr/share/MADdconf.sh
