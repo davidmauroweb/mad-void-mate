@@ -27,7 +27,7 @@ fi
 
 
 #base grafica
-sudo xbps-install -Sy at-spi2-core base-devel p7zip xdg-user-dirs NetworkManager network-manager-applet xorg xinit gvfs elogind lxdm mate nano mate-extra htop neofetch pluma xarchiver octoxbps papirus-icon-theme gtk-theme-united-gnome xtools
+sudo xbps-install -Sy at-spi2-core base-devel p7zip xdg-user-dirs NetworkManager network-manager-applet xorg xinit gvfs elogind lxdm mate brisk-menu nano mate-extra htop neofetch pluma xarchiver octoxbps papirus-icon-theme gtk-theme-united-gnome xtools
 
 #Ofimatica
 clear
