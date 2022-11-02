@@ -1,25 +1,14 @@
-[org/gtk/settings/file-chooser]
-date-format='regular'
-location-mode='path-bar'
-show-hidden=false
-show-size-column=true
-show-type-column=true
-sidebar-width=185
-sort-column='name'
-sort-directories-first=false
-sort-order='ascending'
-type-format='category'
-window-position=(240, 154)
-window-size=(800, 522)
+[caja/desktop]
+font='Sans 8'
 
-[org/mate/caja/window-state]
+[caja/window-state]
 geometry='800x550+240+110'
 maximized=false
 start-with-sidebar=true
 start-with-status-bar=true
 start-with-toolbar=true
 
-[org/mate/desktop/accessibility/keyboard]
+[desktop/accessibility/keyboard]
 bouncekeys-beep-reject=true
 bouncekeys-delay=300
 bouncekeys-enable=false
@@ -42,36 +31,40 @@ timeout=120
 timeout-enable=false
 togglekeys-enable=false
 
-[org/mate/desktop/background]
+[desktop/background]
 color-shading-type='vertical-gradient'
 picture-filename='/usr/share/backgrounds/bg.jpg'
 picture-options='zoom'
 primary-color='rgb(88,145,188)'
 secondary-color='rgb(60,143,37)'
 
-[org/mate/desktop/interface]
+[desktop/interface]
+document-font-name='Sans 8'
+font-name='Sans 8'
 gtk-color-scheme='menubar_fg: #ffffff'
 gtk-theme='United-Arch-Dark-Compact'
 icon-theme='Papirus-Dark'
+monospace-font-name='Monospace 8'
 
-[org/mate/desktop/peripherals/keyboard]
+[desktop/peripherals/keyboard]
 numlock-state='on'
 
-[org/mate/desktop/peripherals/mouse]
+[desktop/peripherals/mouse]
 cursor-theme='default'
 
-[org/mate/desktop/session]
-session-start=1639077349
+[desktop/session]
+session-start=1667386110
 
-[org/mate/marco/general]
+[marco/general]
 num-workspaces=2
 theme='United-Arch-Dark-Compact'
+titlebar-font='Sans Bold 8'
 
-[org/mate/panel/general]
-object-id-list=['menu-bar', 'notification-area', 'clock', 'show-desktop', 'window-list', 'workspace-switcher']
+[panel/general]
+object-id-list=['notification-area', 'clock', 'show-desktop', 'window-list', 'workspace-switcher', 'object-0', 'object-2']
 toplevel-id-list=['top', 'bottom']
 
-[org/mate/panel/objects/clock]
+[panel/objects/clock]
 applet-iid='ClockAppletFactory::ClockApplet'
 locked=true
 object-type='applet'
@@ -79,17 +72,11 @@ panel-right-stick=true
 position=0
 toplevel-id='top'
 
-[org/mate/panel/objects/clock/prefs]
+[panel/objects/clock/prefs]
 custom-format=''
 format='24-hour'
 
-[org/mate/panel/objects/menu-bar]
-locked=true
-object-type='menu-bar'
-position=0
-toplevel-id='top'
-
-[org/mate/panel/objects/notification-area]
+[panel/objects/notification-area]
 applet-iid='NotificationAreaAppletFactory::NotificationArea'
 locked=true
 object-type='applet'
@@ -97,21 +84,35 @@ panel-right-stick=true
 position=10
 toplevel-id='top'
 
-[org/mate/panel/objects/show-desktop]
+[panel/objects/object-0]
+launcher-location='/usr/share/applications/mate-terminal.desktop'
+object-type='launcher'
+panel-right-stick=false
+position=62
+toplevel-id='top'
+
+[panel/objects/object-2]
+applet-iid='BriskMenuFactory::BriskMenu'
+object-type='applet'
+panel-right-stick=false
+position=0
+toplevel-id='top'
+
+[panel/objects/show-desktop]
 applet-iid='WnckletFactory::ShowDesktopApplet'
 locked=true
 object-type='applet'
 position=0
 toplevel-id='bottom'
 
-[org/mate/panel/objects/window-list]
+[panel/objects/window-list]
 applet-iid='WnckletFactory::WindowListApplet'
 locked=true
 object-type='applet'
 position=20
 toplevel-id='bottom'
 
-[org/mate/panel/objects/workspace-switcher]
+[panel/objects/workspace-switcher]
 applet-iid='WnckletFactory::WorkspaceSwitcherApplet'
 locked=true
 object-type='applet'
@@ -119,7 +120,7 @@ panel-right-stick=true
 position=0
 toplevel-id='bottom'
 
-[org/mate/panel/toplevels/bottom]
+[panel/toplevels/bottom]
 expand=true
 orientation='bottom'
 screen=0
@@ -127,13 +128,13 @@ size=24
 y=776
 y-bottom=0
 
-[org/mate/panel/toplevels/top]
+[panel/toplevels/top]
 expand=true
 orientation='top'
 screen=0
 size=24
 
-[org/mate/pluma]
+[pluma]
 active-plugins=['time', 'spell', 'docinfo', 'filebrowser', 'modelines']
 background-pattern='none'
 bottom-panel-size=140
@@ -143,12 +144,12 @@ size=(650, 500)
 state=128
 statusbar-visible=true
 
-[org/mate/pluma/plugins/filebrowser/on-load]
+[pluma/plugins/filebrowser/on-load]
 root='file:///'
 tree-view=true
-virtual-root='file:///home/david/.config'
+virtual-root='file:///home/david/mad-void-mate'
 
-[org/mate/terminal/profiles/default]
+[terminal/profiles/default]
 background-color='#FFFFFFFFDDDD'
 bold-color='#000000000000'
 foreground-color='#000000000000'
