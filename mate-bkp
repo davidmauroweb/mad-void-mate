@@ -147,7 +147,7 @@ statusbar-visible=true
 [pluma/plugins/filebrowser/on-load]
 root='file:///'
 tree-view=true
-virtual-root='file:///home/david/mad-void-mate'
+virtual-root='file:///'
 
 [terminal/profiles/default]
 background-color='#FFFFFFFFDDDD'
