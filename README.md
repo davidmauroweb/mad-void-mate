@@ -1,5 +1,6 @@
 ## Verificar si el usuario pertenece al grupo wheel
-en /etc/group
+Ingresando como usuario ROOT
+en /etc/group agregar el usuario creado en la siguiente linea sin las comillas
 wheel : x : 4 : "USUARIO"
 
 y en /etc/sudoers
