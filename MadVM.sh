@@ -170,7 +170,7 @@ sudo ln -s /etc/sv/lxdm /var/service/
 
 ###
 
-echo "Instalacion de VoidBsp Completada"
+echo "Instalacion de MAD-Void-Mate Completada"
 echo "Pulse cualquiera tecla para continuar..."
 read tecla
 clear
