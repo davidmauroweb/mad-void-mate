@@ -34,4 +34,4 @@ Ejecutar la guía
 
 $ ./MadVM.sh
 
-Seguir los pasos, la clave para realizar las instalaciones puede ser solicitada varias veces seguín el timeout.
+Seguir los pasos, la clave para realizar las instalaciones puede ser solicitada varias veces según el timeout.
