@@ -27,7 +27,8 @@ fi
 
 
 #base grafica
-sudo xbps-install -y at-spi2-core base-devel p7zip xdg-user-dirs NetworkManager network-manager-applet xorg xinit gvfs elogind sddm  htop neofetch xarchiver octoxbps papirus-icon-theme gtk-theme-united-gnome xtools
+sudo xbps-install -y nano void-repo-multilib-nonfree void-repo-nonfree void-repo-multilib at-spi2-core base-devel p7zip xdg-user-dirs NetworkManager network-manager-applet xorg xinit gvfs elogind htop xarchiver octoxbps papirus-icon-theme gtk-theme-united-gnome xtools
+sudo xbps-install -y sddm
 echo "ESCRITORIO"
 echo "--------------------"
 echo "1. Mate Xorg"
@@ -36,14 +37,12 @@ echo "*. Lxqt Xorg"
 read desk
 case $desk in
 	1)
-	lista="mate brisk-menu nano mate-extra pluma"
+	desk="mate brisk-menu mate-extra pluma"
 	;;
 	*)
-	lista="lxqt lxqt-wayland-session wayfire wayland wayland-utils featherpad "
+	desk="lxqt lxqt-wayland-session wayfire wayfire-plugins-extra wayland wayland-utils FeatherPad waylock xwayland-satellite"
 	;;
 esac
-
-sudo xbps-install -y $lista
 
 #Ofimatica
 clear
@@ -116,7 +115,7 @@ esac
 
 # Instalo las selecciones
 echo "instalaciondo los paquetes seleccionados - Ingrese la clave si es requerida"
-sudo xbps-install -y $o $w $m
+sudo xbps-install -y $o $w $m $desk
 
 clear
 echo "Aplicando configuraciones..."
@@ -139,7 +138,7 @@ case $desk in
 	sudo chmod a+x /usr/share/MADdconf.sh
 	;;
 	*)
-	cp $rt/lxqt/* $HOME/.config/lxqt/ -R
+	cp -r $(pwd)/lxqt/* $HOME/.config/lxqt/
 	;;
 esac
 clear
@@ -182,14 +181,14 @@ esac
 
 #iniciar servicios
 echo "Activando Servicios"
-
+sudo mkdir /usr/share/backgrounds/
 sudo cp $rt/bg* /usr/share/backgrounds/
 
 sudo ln -s /etc/sv/dbus /var/service/
 sudo ln -s /etc/sv/NetworkManager /var/service/
 sudo ln -s /etc/sv/elogind /var/service/
 sudo ln -s /etc/sv/sddm /var/service/
-
+sudo sv enable sddm
 
 ###
 
