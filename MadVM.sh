@@ -5,7 +5,7 @@ clear
 
 echo "***********************************************"
 echo " Post Instal de Void"
-echo " Escritorio  Mate+Lxdm"
+echo " Escritorio  Mate o LXQTWayland junto a SDDM"
 echo " NOTA: la clave puede ser solicitada en varias"
 echo " oportunidades por cuestiones de TimeOut"
 echo "***********************************************"
@@ -27,7 +27,23 @@ fi
 
 
 #base grafica
-sudo xbps-install -Sy at-spi2-core base-devel p7zip xdg-user-dirs NetworkManager network-manager-applet xorg xinit gvfs elogind lxdm mate brisk-menu nano mate-extra htop neofetch pluma xarchiver octoxbps papirus-icon-theme gtk-theme-united-gnome xtools
+sudo xbps-install -y at-spi2-core base-devel p7zip xdg-user-dirs NetworkManager network-manager-applet xorg xinit gvfs elogind sddm  htop neofetch xarchiver octoxbps papirus-icon-theme gtk-theme-united-gnome xtools
+echo "ESCRITORIO"
+echo "--------------------"
+echo "1. Mate Xorg"
+echo "2. Lxqt Wayland"
+echo "*. Lxqt Xorg"
+read desk
+case $desk in
+	1)
+	lista="mate brisk-menu nano mate-extra pluma"
+	;;
+	*)
+	lista="lxqt lxqt-wayland-session wayfire wayland wayland-utils featherpad "
+	;;
+esac
+
+sudo xbps-install -y $lista
 
 #Ofimatica
 clear
@@ -100,7 +116,7 @@ esac
 
 # Instalo las selecciones
 echo "instalaciondo los paquetes seleccionados - Ingrese la clave si es requerida"
-sudo xbps-install -Sy $o $w $m
+sudo xbps-install -y $o $w $m
 
 clear
 echo "Aplicando configuraciones..."
@@ -113,11 +129,19 @@ echo "copiando archivos de configuracion personal"
 
 
 #cp -r config/* $HOME/.config/
-mkdir $HOME/.config/mate/
-cp backgrounds.xml $HOME/.config/mate/
-mkdir $HOME/.config/autostart
-cp *.desktop $HOME/.config/autostart/
-
+case $desk in 
+	1)
+	mkdir $HOME/.config/mate/
+	cp $rt/backgrounds.xml $HOME/.config/mate/
+	mkdir $HOME/.config/autostart
+	cp $rt/*.desktop $HOME/.config/autostart/
+	sudo cp $rt/dconf.sh /usr/share/MADdconf.sh
+	sudo chmod a+x /usr/share/MADdconf.sh
+	;;
+	*)
+	cp $rt/lxqt/* $HOME/.config/lxqt/ -R
+	;;
+esac
 clear
 echo "XBPS-Src - para instalar software extra "
 echo "Visitar https://github.com/void-linux/void-packages para mas info"
@@ -158,14 +182,13 @@ esac
 
 #iniciar servicios
 echo "Activando Servicios"
-sudo cp $rt/dconf.sh /usr/share/MADdconf.sh
-sudo cp $rt/lxdm.conf /etc/lxdm/
-sudo chmod a+x /usr/share/MADdconf.sh
+
 sudo cp $rt/bg* /usr/share/backgrounds/
+
 sudo ln -s /etc/sv/dbus /var/service/
 sudo ln -s /etc/sv/NetworkManager /var/service/
 sudo ln -s /etc/sv/elogind /var/service/
-sudo ln -s /etc/sv/lxdm /var/service/
+sudo ln -s /etc/sv/sddm /var/service/
 
 
 ###
