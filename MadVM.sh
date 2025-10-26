@@ -27,8 +27,7 @@ fi
 
 
 #base grafica
-sudo xbps-install -y nano void-repo-multilib-nonfree void-repo-nonfree void-repo-multilib at-spi2-core base-devel p7zip xdg-user-dirs NetworkManager network-manager-applet xorg xinit gvfs elogind htop xarchiver octoxbps papirus-icon-theme gtk-theme-united-gnome xtools
-sudo xbps-install -y sddm
+sudo xbps-install -y sddm nano void-repo-multilib-nonfree void-repo-nonfree void-repo-multilib at-spi2-core base-devel p7zip xdg-user-dirs NetworkManager network-manager-applet xorg xinit gvfs elogind htop xarchiver octoxbps papirus-icon-theme gtk-theme-united-gnome xtools
 echo "ESCRITORIO"
 echo "--------------------"
 echo "1. Mate Xorg"
@@ -138,7 +137,7 @@ case $desk in
 	sudo chmod a+x /usr/share/MADdconf.sh
 	;;
 	*)
-	cp -r $(pwd)/lxqt/* $HOME/.config/lxqt/
+	cp -r $(pwd)/lxqt $HOME/.config/
 	;;
 esac
 clear
